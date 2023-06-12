@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Room {
 
-    public int id;
+    public static int id;
 
     public static ArrayList<Room> rooms = new ArrayList<>();
 
@@ -43,7 +43,7 @@ public class Room {
         this.guests.add(guest);
     }
 
-    public static ArrayList<Guest> guests(){
+    public static ArrayList<Guest> guests() {
         ArrayList<Guest> guests = new ArrayList<>();
         for (int i = 0; i < rooms.size(); i++) {
             for (int a = 0; a < rooms.get(i).guests.size(); a++) {
@@ -62,8 +62,12 @@ public class Room {
         return new Room(id);
     }
 
-    public static void deleteRoom(int id){
-            rooms.remove(id);
-            System.out.println("Rezervacija panaikinta");
+    public static void deleteRoom(int id) {
+        for (int i = 0; i < rooms.size(); i++) {
+            if (rooms.get(i).id == id) {
+                rooms.remove(i);
+                System.out.println("Rezervacija panaikinta");
+            }
+        }
     }
 }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -29,7 +28,7 @@ public class Main {
                     System.out.println("Įveskite pavardę");
                     guest.setSurname(sc.nextLine());
                     room.addGuest(guest);
-                    System.out.println("Rezervacija sekminga");
+                    System.out.println("Rezervacija sekminga, jusu ID yra "+ Room.id);
                     break;
                 case 2:
                     System.out.println("Įveskite kambario kurį norite trinti id");

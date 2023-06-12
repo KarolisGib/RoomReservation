@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Guest {
 
     private int id;
@@ -53,7 +51,7 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Guest{" +
+        return "Rezervacija{" +
                 "Kambarys: " + roomId +
                 ", Svečio vardas: '" + name + '\'' +
                 ", Svečio pavardė: '" + surname + '\'' +
